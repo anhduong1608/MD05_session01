@@ -29,7 +29,7 @@ public class HelloServlet extends HttpServlet {
         System.out.println(password);
         System.out.println(confirmpass);
 
-        if (username == null) {
+        if (username == null||username.trim().isEmpty()) {
             namemsg = "Username is empty";
             flag = false;
         }
@@ -42,7 +42,7 @@ public class HelloServlet extends HttpServlet {
             passwordmsg = "Password is not valid";
             flag = false;
         }
-        if (confirmpass == null) {
+        if (confirmpass == null||confirmpass.trim().isEmpty()) {
             confirmpassmsg = "Confirm Password is empty";
             flag = false;
         } else if (!confirmpass.equals(password)) {
