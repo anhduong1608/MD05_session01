@@ -8,28 +8,32 @@ import jakarta.servlet.annotation.*;
 
 @WebServlet(urlPatterns = "/sign_up")
 public class HelloServlet extends HttpServlet {
-    String namemsg = "";
-    String passwordmsg = "";
-    String confirmpassmsg = "";
-    String emailmsg = "";
-    String regexPass = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&^#()_+=-])[A-Za-z\\d@$!%*?&^#()_+=-]{8,}$";
-    String regexEmail = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.(com|vn|edu\\.vn|org|net)$";
-    boolean flag = true;
-    String RegisteredSuccessfully = "";
+
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println(flag);
+        String namemsg = "";
+        String passwordmsg = "";
+        String confirmpassmsg = "";
+        String emailmsg = "";
+        String regexPass = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&^#()_+=-])[A-Za-z\\d@$!%*?&^#()_+=-]{8,}$";
+        String regexEmail = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.(com|vn|edu\\.vn|org|net)$";
+        boolean flag = true;
+        String RegisteredSuccessfully = "";
+
+//        System.out.println(flag);
         String username = req.getParameter("username");
         String password = req.getParameter("password");
         String confirmpass = req.getParameter("confirm_password");
         String email = req.getParameter("email");
         System.out.println(password);
         System.out.println(confirmpass);
+
         if (username == null) {
             namemsg = "Username is empty";
             flag = false;
         }
+        System.out.println(namemsg);
 
         if (password == null) {
             passwordmsg = "Password is empty";

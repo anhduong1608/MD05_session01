@@ -16,15 +16,15 @@
     <h1>Sign Up</h1>
 
     <form method="POST" action="sign_up">
-        <p>${RegisteredSuccessfully}</p>
+        <p style="color: #338715;">${registeredMsg}</p>
         <input type="text" name="username" placeholder="Username"><br>
-        <p>${namemsg}</p>
+        <p style="color: #fb4f4f">${namemsg}</p>
         <input type="password" name="password" placeholder="Password"><br>
-        <p>${passwordmsg}</p>
+        <p style="color: #fb4f4f">${passwordmsg}</p>
         <input type="password" name="confirm_password" placeholder="Confirm Password"><br>
-        <p>${confirmpassmsg}</p>
+        <p style="color: #fb4f4f">${confirmpassmsg}</p>
         <input type="email" name="email" placeholder="Email Address"><br>
-        <p>${emailmsg}</p>
+        <p style="color: #fb4f4f">${emailmsg}</p>
         <button type="submit">Sign Up</button>
     </form>
 </div>
